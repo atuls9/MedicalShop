@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProductForm from "./components/ProductAdd/ProductForm";
+import ProductShowOnScreen from "./components/ProductShowOnScreen";
+import ProductProvider from "./store/ProductProvider";
+import CartProvider from "./store/CartProvider";
+import { Modal } from "@mui/material";
+import Cart from "./components/Cart";
+import { useState } from "react";
+import Header from "./components/Header";
 
 function App() {
+  const [openCart, setOpenCart] = useState(false);
+  const handleClose = () => setOpenCart(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductProvider>
+      <CartProvider>
+        <Header setOpen={setOpenCart} />
+        <Modal open={openCart} onClose={handleClose}>
+          <Cart setCloseCart={handleClose}> </Cart>
+        </Modal>
+        <ProductForm />
+        <ProductShowOnScreen />
+      </CartProvider>
+    </ProductProvider>
   );
 }
 

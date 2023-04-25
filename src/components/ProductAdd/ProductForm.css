@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  /* grid-template-rows: repeat(2, 100px); */
+  grid-template-columns: repeat(7, 1fr);
+}
+.item {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}

@@ -1,0 +1,41 @@
+ul {
+  background-color: red;
+  position: relative;
+  margin: 10px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ul li {
+  display: flex;
+  background: rgb(199, 138, 138);
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.button button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.ul div {
+  display: flex;
+  margin: auto;
+  justify-content: right;
+}
+.ul span:nth-child(1) {
+  width: 200px;
+}
+.ul span:nth-child(2) {
+  width: 200px;
+}
+.ul span:nth-child(3) {
+  width: 100px;
+}
